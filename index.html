@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kanchenjunga:wght@400;500;600;700&family=Kirang+Haerang&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="styles index.css">
+        <title>Collaposer</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="title">Collaposer: Transforming Photo Collections into
+                Visual Assets for Storytelling with Collages</div>
+            <div class="subtitle">Anonymous Author(s)</div>
+        </header>
+        <nav>
+            <a href="#" class="gray-link"><i class="fa-solid fa-file-pdf"></i> Paper</a>
+            <a href="#" class="gray-link"><i class="fa-solid fa-code"></i> Demo</a>
+            <a href="#results"><i class="fa-solid fa-chart-bar"></i> Results</a>
+            <a href="https://www.youtube.com/watch?v=3PJCJjBqcEg"><i class="fa-solid fa-video"></i> Video</a>
+        </nav>
+        <div class="container">
+            <section>
+                <img class="pic" src="./0. Pic/teaser.png" alt="teaser picture">
+                <div class="paragraph">
+                    Collaposer empowers independent creators to prepare visual
+                    assets for collage-based storytelling with a streamlined
+                    workflow by automatically selecting, cutting out, and
+                    visualizing diverse visual assets based on the input photo
+                    collection and story description.
+                    Given a curated overview of the extracted visual elements,
+                    users may interactively compose them into a static collage,
+                    or animate them to create expressive visual stories.
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">Abstract</div>
+                <div class="paragraph">
+                    Collage is an art form that remixes visual elements to
+                    create narratives.
+                    However, it remains tedious and time-consuming to
+                    select, cut out, and organize visual assets from an
+                    unorganized set of images.
+                    Informed by a formative study, we propose Collaposer, a
+                    tool designed to automate the preparation of visual
+                    assets for storytelling with collage.
+                    Given a photo collection and a story description,
+                    Collaposer selects and cuts out visual elements that are
+                    both diverse in content and consistent with the story.
+                    Specifically, objects are extracted via image tagging,
+                    object detection, and segmentation, and then selected
+                    and organized leveraging the reasoning capabilities of
+                    LLM.
+                    To facilitate asset selection, Collaposer provides a
+                    curated overview that groups similar assets while
+                    resizing them based on selection criteria.
+                    A user study (N=12) demonstrated that Collaposer
+                    produced rich story-relevant assets, facilitated
+                    overview and navigation, and inspired users to create
+                    diverse stories.
+                    We further showcase our system's expressiveness in a
+                    gallery.
+                </div>
+                <img class="pic" src="./0. Pic/pipeline.png"
+                    alt="pipeline picture">
+                <div class="paragraph">
+                    Our pipeline consists of three stages.
+                    The inputs include an image collection and a story
+                    description.
+                    In Stage I, valid visual elements are trimmed out and tagged
+                    with an object name.
+                    In Stage II, visual elements relevant to the story are
+                    selected and clustered into semantic groups.
+                    The elements classified as characters undergo part
+                    segmentation and pose estimation for later manipulation.
+                    In Stage III, the visual assets are visualized in a compact
+                    view to facilitate navigation and composition.
+                </div>
+            </section>
+
+            <section id="results">
+                <div class="section-title">Animated Collage Results</div>
+                <div class="note">* <span>Hover</span> the thumbnail to play
+                    animation.</div>
+                <div class="note">* <span>Click</span> the thumbnail to see
+                    details.</div>
+                <div class="collage-container">
+                    <div class="collage-item">
+                        <a href="./1. Gallery/catskickmoon.html"
+                            target="_blank">
+                            <video loop muted>
+                                <source
+                                    src="./1. Gallery/videos/case1-cat-kick-moon.mp4"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </a>
+                    </div>
+
+                    <div class="collage-item">
+                        <a href="./1. Gallery/uist25.html" target="_blank">
+                            <video loop muted>
+                                <source
+                                    src="./1. Gallery/videos/case6-uist.mp4"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </a>
+                    </div>
+
+                    <div class="collage-item">
+                        <a href="./1. Gallery/gaint.html" target="_blank">
+                            <video loop muted>
+                                <source
+                                    src="./1. Gallery/videos/case4-gaintcat.mp4"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </a>
+                    </div>
+
+                    <div class="collage-item">
+                        <a href="./1. Gallery/flower.html" target="_blank">
+                            <video loop muted>
+                                <source
+                                    src="./1. Gallery/videos/case2-flower-woman.mp4"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </a>
+                    </div>
+
+                    <div class="collage-item">
+                        <a href="./1. Gallery/moon.html" target="_blank">
+                            <video loop muted>
+                                <source
+                                    src="./1. Gallery/videos/case5-planets.mp4"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </a>
+                    </div>
+
+                    <div class="collage-item">
+                        <a href="./1. Gallery/hawaii.html" target="_blank">
+                            <video loop muted>
+                                <source
+                                    src="./1. Gallery/videos/case3-hawaii-local.mp4"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+
+            <section>
+                <div class="section-title">User
+                    Evaluation Questionnaire Results</div>
+                <div class="linktofiile">
+                </div>
+                <img class="pic" src="./0. Pic/rating.png" alt="rating picture">
+                <paragraph>
+                    Collaposer outperforms baselines across all dimensions, demonstrating its ability to select diverse visual elements that align with the story and effectively present them for collage creation. In contrast, Ablated-Select shows the weakest asset-story consistency, often failing to provide relevant elements and occasionally including unrelated ones. Ablated-Present delivers the least satisfactory presentation results, though it has a relatively smaller impact on system usability. The distribution, mean value (Mean), and standard deviation (SD) of the subjective ratings in the post-study questionnaire based on a 7-point Likert scale (1: strongly disagree, 4: neutral, 7: strongly agree).
+                </paragraph>
+            </section>
+        </div>
+        <footer>
+            <p>&copy; 2025 Jiayi Zhou. All rights reserved.</p>
+        </footer>
+        <script>
+        const collageItems = document.querySelectorAll('.collage-item');
+
+        collageItems.forEach((item) => {
+            const video = item.querySelector('video');
+            item.addEventListener('mouseenter', () => {
+                video.play();
+            });
+            item.addEventListener('mouseleave', () => {
+                video.pause();
+            });
+        });
+    </script>
+    </body>
+
+</html>

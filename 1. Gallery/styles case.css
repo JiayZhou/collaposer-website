@@ -1,0 +1,114 @@
+body {
+    font-family: "Kanchenjunga", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(252, 252, 252);
+}
+
+header {
+    padding-bottom: 2vh;
+    text-align: center;
+    z-index: 9999;
+    background-color: rgb(236, 236, 236);
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+padding: 4px 12%; 
+border-top: 1px solid #040404;
+border-bottom: 1px solid #040404;
+}
+
+footer {
+        text-align: center;
+        padding: 4px;
+        color: #646464;
+        background-color: rgb(236, 236, 236);
+        font-size: 12px;
+}
+
+.title {
+    font-size: 30px;
+    margin-bottom: 4px;
+    font-weight: 600;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.section-title {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+section {
+    padding: 0px 0px 12px 0px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 12px;
+}
+
+section:first-of-type {
+    margin-top: 0;
+}
+
+a {
+    color: #040404;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(18, 109, 201);
+}
+.gray-link {
+    color: rgb(104, 104, 104);
+}
+.gray-link:hover {
+    color: rgb(104, 104, 104);
+}
+
+.back {
+display: flex;
+justify-content: space-between;
+padding: 12px 8% 0px 8%; 
+}
+
+.collage-description {
+    padding: 0 10px 10px 10px;
+}
+
+.paragraph {
+    text-align: justify;
+}
+.paragraph span {
+    text-decoration: underline;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.media {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    max-width: 800px;
+}
+
+img,
+video {
+    width: 100%;
+    width: 100%;
+}

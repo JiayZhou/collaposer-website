@@ -1,0 +1,137 @@
+body {
+    font-family: "Kanchenjunga", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(252, 252, 252);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+    z-index: 9999;
+}
+
+header {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    text-align: center;
+    z-index: 9999;
+}
+
+footer {
+        text-align: center;
+        padding: 4px;
+        color: #646464;
+        background-color: rgb(236, 236, 236);
+        font-size: 12px;
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+padding: 4px 12%; 
+border-top: 1px solid #040404;
+border-bottom: 1px solid #040404;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 600;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.section-title {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.note {
+        text-decoration: none;
+    }
+.note span {
+        text-decoration: underline;
+    }
+
+.paragraph {
+    text-align: justify;
+}
+
+.pic {
+width: 95%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 48px;
+margin-bottom: 24px;
+}
+
+section {
+    padding: 0px 0px 48px 0px;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 12px;
+    border-top: 1px solid #040404; 
+}
+section:first-of-type {
+    margin-top: 2vh;
+    border-top: 0;
+}
+
+a {
+    color: #040404;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(18, 109, 201);
+}
+.gray-link {
+    color: rgb(104, 104, 104);
+}
+.gray-link:hover {
+    color: rgb(104, 104, 104);
+}
+
+.collage-item {
+    display: inline-block;
+    margin-bottom: 10px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.collage-item:hover {
+    transform: translateY(-5px);
+}
+
+.collage-item video {
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.collage-item:hover video {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.collage-container {
+    margin: auto;
+    display: flex;
+    width: fit-content;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
