@@ -63,6 +63,11 @@ border-bottom: 1px solid #040404;
 .note span {
         text-decoration: underline;
     }
+@media (max-width: 768px) {
+    .mobile-hide {
+        display: none;
+    }
+}
 
 .paragraph {
     text-align: justify;

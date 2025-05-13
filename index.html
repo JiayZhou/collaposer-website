@@ -91,10 +91,8 @@
 
             <section id="results">
                 <div class="section-title">Animated Collage Results</div>
-                <div class="note">* <span>Hover</span> the thumbnail to play
-                    animation.</div>
-                <div class="note">* <span>Click</span> the thumbnail to see
-                    details.</div>
+                <div class="note mobile-hide">* <span>Hover</span> the thumbnail to play animation on web.</div>
+                <div class="note">* <span>Click</span> the thumbnail to see details.</div>
                 <div class="collage-container">
                     <div class="collage-item">
                         <a href="./1. Gallery/catskickmoon.html"
@@ -163,7 +161,6 @@
                         </a>
                     </div>
                 </div>
-
             </section>
 
             <section>
@@ -183,14 +180,23 @@
         <script>
         const collageItems = document.querySelectorAll('.collage-item');
 
+        function isMobile() {
+            return window.matchMedia('(max-width: 768px)').matches;
+        }
+
         collageItems.forEach((item) => {
             const video = item.querySelector('video');
-            item.addEventListener('mouseenter', () => {
+        
+            if (isMobile()) {
                 video.play();
-            });
-            item.addEventListener('mouseleave', () => {
-                video.pause();
-            });
+            } else {
+                item.addEventListener('mouseenter', () => {
+                    video.play();
+                });
+                item.addEventListener('mouseleave', () => {
+                    video.pause();
+                });
+            }
         });
     </script>
     </body>
