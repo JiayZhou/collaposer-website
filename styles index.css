@@ -82,6 +82,22 @@ margin-top: 48px;
 margin-bottom: 24px;
 }
 
+.video-container {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 56.25%;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 section {
     padding: 0px 0px 48px 0px;
     max-width: 1280px;
