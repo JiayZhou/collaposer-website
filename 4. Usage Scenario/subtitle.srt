@@ -1,0 +1,220 @@
+1
+00:00:00,200 --> 00:00:02,833
+Preparing visual assets for collage
+
+2
+00:00:02,833 --> 00:00:05,733
+is a tedious and time-consuming process.
+
+3
+00:00:06,600 --> 00:00:10,300
+We introduce Collaposer, a tool that transforms photo collections
+
+4
+00:00:10,300 --> 00:00:15,433
+into visual assets for storytelling with collages.
+
+5
+00:00:15,933 --> 00:00:19,300
+Let's follow Lucas, a 2D motion designer,
+
+6
+00:00:19,300 --> 00:00:23,366
+as he creates a collage animation with the help of Collaposer.
+
+7
+00:00:23,633 --> 00:00:26,433
+Lucas begins with a folder of images
+
+8
+00:00:26,566 --> 00:00:30,200
+as he envisions a giant cat living in the countryside.
+
+9
+00:00:30,300 --> 00:00:33,800
+He browses through the album and types a story description.
+
+10
+00:00:35,900 --> 00:00:41,133
+A big cat is resting in a landscape under a blue sky with some clouds,
+
+11
+00:00:41,166 --> 00:00:43,300
+featuring a huge moon.
+
+12
+00:00:45,233 --> 00:00:48,766
+A man in white and red clothing is jumping on its back,
+
+13
+00:00:48,766 --> 00:00:51,300
+while a woman is lying there as well.
+
+14
+00:00:53,300 --> 00:00:57,100
+In the foreground, there are also some trees and plants.
+
+15
+00:00:58,933 --> 00:01:02,966
+It contains fixed elements directly related to the narrative,
+
+16
+00:01:03,366 --> 00:01:05,966
+while it also contains abstract words that
+
+17
+00:01:05,966 --> 00:01:10,700
+indirectly suggest additional visual elements related to the story.
+
+18
+00:01:11,233 --> 00:01:14,966
+In the backend, Collaposer extracts and clusters
+
+19
+00:01:14,966 --> 00:01:18,966
+visual elements from the photo collection based on the description.
+
+20
+00:01:19,366 --> 00:01:20,533
+After clustering,
+
+21
+00:01:20,533 --> 00:01:23,833
+character assets are segmented into body parts
+
+22
+00:01:23,833 --> 00:01:26,933
+with key points estimated for each section,
+
+23
+00:01:26,933 --> 00:01:30,900
+in preparation for articulated animation and deformation.
+
+24
+00:01:31,400 --> 00:01:34,566
+When the preparation of visual assets is completed,
+
+25
+00:01:34,566 --> 00:01:38,000
+the system interface transitions to the layer panel.
+
+26
+00:01:38,566 --> 00:01:39,966
+On the canvas view,
+
+27
+00:01:39,966 --> 00:01:42,500
+clustered elements are presented together.
+
+28
+00:01:43,033 --> 00:01:46,633
+The elements are resized based on selection criteria
+
+29
+00:01:46,633 --> 00:01:50,433
+to improve visibility and make them easier to select.
+
+30
+00:01:51,133 --> 00:01:52,400
+In the tree view
+
+31
+00:01:52,400 --> 00:01:55,133
+visual elements appear as leaf nodes
+
+32
+00:01:55,133 --> 00:01:57,133
+in a structured layer hierarchy,
+
+33
+00:01:57,133 --> 00:01:59,400
+providing an organized overview.
+
+34
+00:02:01,433 --> 00:02:04,600
+Lucas grasps an overview of the visual assets
+
+35
+00:02:04,600 --> 00:02:09,300
+and quickly identifies visual elements that catch his interest.
+
+36
+00:02:10,600 --> 00:02:14,200
+He interacts with both views to select desired elements
+
+37
+00:02:14,200 --> 00:02:16,933
+and arrange them into a static collage.
+
+38
+00:02:19,166 --> 00:02:23,366
+Lucas is satisfied with the scene and clicks export to obtain
+
+39
+00:02:23,366 --> 00:02:25,166
+two JSON files.
+
+40
+00:02:25,400 --> 00:02:28,833
+One that records the visual assets prepared by the system
+
+41
+00:02:28,833 --> 00:02:31,433
+and another that captures the final collage
+
+42
+00:02:31,433 --> 00:02:33,233
+information on the canvas,
+
+43
+00:02:33,233 --> 00:02:34,933
+along with a screenshot.
+
+44
+00:02:36,633 --> 00:02:39,133
+He runs an Extendscript script.
+
+45
+00:02:40,833 --> 00:02:45,133
+These files are read as clustered layers in Adobe After Effects.
+
+46
+00:02:47,266 --> 00:02:50,500
+Character layers are replaced by a set of body parts
+
+47
+00:02:50,500 --> 00:02:53,933
+with joint points serving as rotation centers.
+
+48
+00:02:55,433 --> 00:02:58,200
+Lucas adds a paper texture to the background
+
+49
+00:02:58,200 --> 00:02:59,266
+and adjusts the color
+
+50
+00:02:59,266 --> 00:03:02,000
+to match the desired tone of the composition.
+
+51
+00:03:03,700 --> 00:03:07,800
+He then animates the collages especially for characters,
+
+52
+00:03:07,800 --> 00:03:10,800
+as the separated body parts and body key points
+
+53
+00:03:10,800 --> 00:03:15,000
+allow for shape deformation and articulated animation.
+
+54
+00:03:16,933 --> 00:03:19,100
+Here are some animated collages
+
+55
+00:03:19,100 --> 00:03:21,800
+created with the output of Collaposer.
+
