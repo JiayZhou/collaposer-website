@@ -72,18 +72,56 @@
                 line-height: 1.35;
                 font-weight: 400;
             }
+
+            /* top-left "back/home" icon (not part of nav) */
+            .home-corner {
+                position: fixed;
+                top: 12px;
+                left: 12px;
+                z-index: 10000;
+
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 40px;
+                height: 40px;
+                border-radius: 999px;
+
+                background: rgba(252, 252, 252, 0.92);
+                border: 1px solid rgba(4, 4, 4, 0.25);
+                color: #040404;
+
+                box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+                backdrop-filter: blur(6px);
+                -webkit-backdrop-filter: blur(6px);
+            }
+
+            .home-corner:hover {
+                color: rgb(18, 109, 201);
+                border-color: rgb(18, 109, 201);
+            }
+
+            .home-corner:focus-visible {
+                outline: 3px solid rgb(18, 109, 201);
+                outline-offset: 2px;
+            }
         </style>
 
         <title>Collaposer</title>
     </head>
 
     <body>
+        <!-- standalone corner button -->
+        <a class="home-corner" href="https://jiayzhou.github.io/" aria-label="Back to homepage" title="Back to homepage">
+            <i class="fa-solid fa-house"></i>
+        </a>
 
         <header>
             <div class="title">Collaposer: Transforming Photo Collections into
                 Visual Assets for Storytelling with Collages</div>
             <div class="subtitle">
-                <strong>Jiayi Zhou</strong><sup>1</sup>, Liwenhan Xie<sup>1</sup>, Jiaju Ma<sup>2</sup>,
+                <strong><a href="https://jiayzhou.github.io/" target="_blank" rel="noopener noreferrer">Jiayi Zhou</a></strong><sup>1</sup>, Liwenhan Xie<sup>1</sup>, Jiaju Ma<sup>2</sup>,
                 Zheng Wei<sup>1</sup>, Huamin Qu<sup>1</sup>, Anyi Rao<sup>1</sup>
             </div>
             <div class="subtitle affiliation"><sup>1</sup>HKUST &nbsp;&nbsp; <sup>2</sup>Stanford University</div>
