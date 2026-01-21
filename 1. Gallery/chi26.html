@@ -6,13 +6,35 @@
     <meta name="robots" content="noindex">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles case.css">
+
+    <!-- match index.html font settings -->
+    <style>
+        :root {
+            font-size: 16px;
+            line-height: 1.65;
+            text-rendering: optimizeLegibility;
+            -webkit-text-size-adjust: 100%;
+
+            /* match index.html */
+            --content-max: 72ch;
+        }
+
+        @media (min-width: 1024px) {
+            :root {
+                --content-max: 90ch;
+            }
+        }
+
+        body {
+            font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            font-weight: 400;
+            letter-spacing: normal;
+        }
+    </style>
+
     <title>Case: CHI26</title>
 </head>
 
@@ -53,7 +75,7 @@
                 Collaposer Output: Static Collage with Layered Assets (Manually Layout)
             </div>
             <div class="text-center">
-                <img src="./Collaposer Output/chi26.png" alt="Collaposer Output">
+                <img src="./Collaposer Output/chi26.png" alt="Collaposer Output" loading="lazy" decoding="async">
             </div>
         </section>
         <section>
@@ -76,14 +98,14 @@
                     </li>
                     <li style="margin-bottom: 10px;">
                         <i class="fa-solid fa-film" style="margin-right: 10px;"></i>
-                        <span>Animation Design and Production</span>: In this animated collage, butterflies serve as a visual transition. They flap outward from the center, revealing the poster underneath. In the final scene, two butterflies flap while a sea lion moves from the "B" to the "n" in "Busan" (stop-motion).
+                        <span>Animation Design and Production</span>: In this animated collage, butterflies serve as a visual transition. They flap outward from the center, revealing the poster underneath. In the final scene, two butterflies flap while a sea lion moves from the “B” to the “e” in “Barcelona” (stop-motion).
                     </li>
                 </ul>
             </div>
         </section>
         <section>
             <div class="section-title">Final Video</div>
-            <video controls="controls" poster="./posters/case6-chi26.png">
+            <video controls playsinline preload="metadata" poster="./posters/case6-chi26.png">
                 <source src="./videos/case6-chi26.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
