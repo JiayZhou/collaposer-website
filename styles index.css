@@ -184,8 +184,8 @@ a:hover {
     transition: transform 0.6s ease-in-out;
 }
 
-.collage-item:hover {
-    transform: translateY(-5px);
+.collage-item a {
+    display: block;
 }
 
 .collage-item video {
@@ -194,10 +194,23 @@ a:hover {
     object-fit: cover;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
+    display: block;
 }
 
-.collage-item:hover video {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+@media (hover: hover) and (pointer: fine) {
+    .collage-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .collage-item:hover video {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .collage-item video {
+        pointer-events: none;
+    }
 }
 
 .collage-container {

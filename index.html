@@ -179,7 +179,7 @@ Our evaluation shows that Collaposer effectively automates the preparation proce
                     <div class="collage-item">
                         <a href="./1. Gallery/catskickmoon.html"
                             target="_blank">
-                            <video autoplay loop muted poster="./1. Gallery/gif/case1-cat-kick-moon.gif">
+                            <video loop muted playsinline preload="metadata" poster="./1. Gallery/gif/case1-cat-kick-moon.gif">
                                 <source
                                     src="./1. Gallery/videos/case1-cat-kick-moon.mp4"
                                     type="video/mp4">
@@ -190,7 +190,7 @@ Our evaluation shows that Collaposer effectively automates the preparation proce
 
                     <div class="collage-item">
                         <a href="./1. Gallery/chi26.html" target="_blank">
-                            <video autoplay loop muted poster="./1. Gallery/gif/case6-uist.gif">
+                            <video loop muted playsinline preload="metadata" poster="./1. Gallery/gif/case6-uist.gif">
                                 <source
                                     src="./1. Gallery/videos/case6-chi26.mp4"
                                     type="video/mp4">
@@ -201,7 +201,7 @@ Our evaluation shows that Collaposer effectively automates the preparation proce
 
                     <div class="collage-item">
                         <a href="./1. Gallery/gaint.html" target="_blank">
-                            <video autoplay loop muted poster="./1. Gallery/gif/case4-gaintcat.gif">
+                            <video loop muted playsinline preload="metadata" poster="./1. Gallery/gif/case4-gaintcat.gif">
                                 <source
                                     src="./1. Gallery/videos/case4-gaintcat.mp4"
                                     type="video/mp4">
@@ -212,7 +212,7 @@ Our evaluation shows that Collaposer effectively automates the preparation proce
 
                     <div class="collage-item">
                         <a href="./1. Gallery/flower.html" target="_blank">
-                            <video autoplay loop muted poster="./1. Gallery/gif/case2-flower-woman.gif">
+                            <video loop muted playsinline preload="metadata" poster="./1. Gallery/gif/case2-flower-woman.gif">
                                 <source
                                     src="./1. Gallery/videos/case2-flower-woman.mp4"
                                     type="video/mp4">
@@ -223,7 +223,7 @@ Our evaluation shows that Collaposer effectively automates the preparation proce
 
                     <div class="collage-item">
                         <a href="./1. Gallery/moon.html" target="_blank">
-                            <video autoplay loop muted poster="./1. Gallery/gif/case5-planets.gif">
+                            <video loop muted playsinline preload="metadata" poster="./1. Gallery/gif/case5-planets.gif">
                                 <source
                                     src="./1. Gallery/videos/case5-planets.mp4"
                                     type="video/mp4">
@@ -234,7 +234,7 @@ Our evaluation shows that Collaposer effectively automates the preparation proce
 
                     <div class="collage-item">
                         <a href="./1. Gallery/hawaii.html" target="_blank">
-                            <video autoplay loop muted poster="./1. Gallery/gif/case3-hawaii-local.gif">
+                            <video loop muted playsinline preload="metadata" poster="./1. Gallery/gif/case3-hawaii-local.gif">
                                 <source
                                     src="./1. Gallery/videos/case3-hawaii-local.mp4"
                                     type="video/mp4">
@@ -275,23 +275,23 @@ Our evaluation shows that Collaposer effectively automates the preparation proce
         </footer>
         <script>
         const collageItems = document.querySelectorAll('.collage-item');
-
-        function isMobile() {
-            return window.matchMedia('(max-width: 768px)').matches;
-        }
+        const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
         collageItems.forEach((item) => {
             const video = item.querySelector('video');
-        
-            if (isMobile()) {
-                video.play();
-            } else {
+            if (!video) return;
+
+            if (canHover) {
                 item.addEventListener('mouseenter', () => {
-                    video.play();
+                    video.play().catch(() => {});
                 });
                 item.addEventListener('mouseleave', () => {
                     video.pause();
+                    video.currentTime = 0;
+                    video.load();
                 });
+            } else {
+                video.play().catch(() => {});
             }
         });
     </script>
