@@ -6,13 +6,74 @@
         <meta name="robots" content="noindex">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
-            href="https://fonts.googleapis.com/css2?family=Kanchenjunga:wght@400;500;600;700&family=Kirang+Haerang&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
             rel="stylesheet">
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="styles index.css">
+
+        <style>
+            /* Baseline typography (typical web defaults) */
+            :root {
+                font-size: 16px;
+                line-height: 1.5;
+                text-rendering: optimizeLegibility;
+                -webkit-text-size-adjust: 100%;
+
+                /* Shared column width for BOTH text + media (prevents misaligned edges) */
+                --content-max: 72ch;
+            }
+
+            /* Larger screens: allow a wider (but still bounded) column */
+            @media (min-width: 1024px) {
+                :root { --content-max: 90ch; }
+            }
+
+            body {
+                font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+                font-weight: 400;
+                letter-spacing: normal;
+            }
+
+            /* Media: center + match content column width */
+            .pic {
+                display: block;
+                width: 100%;
+                height: auto;
+                max-width: var(--content-max);
+                margin-inline: auto;
+            }
+
+            /* Body copy: center + match the same column width */
+            .paragraph,
+            paragraph {
+                line-height: 1.65;
+                max-width: var(--content-max);
+                margin-inline: auto;
+            }
+
+            /* (Optional but usually desirable) keep section titles aligned with the same column */
+            .section-title {
+                max-width: var(--content-max);
+                margin-inline: auto;
+            }
+
+            /* Headings: tighter than body copy to avoid “bloated” look */
+            .title {
+                line-height: 1.15;
+                font-weight: 600;
+            }
+
+            .subtitle {
+                line-height: 1.35;
+                font-weight: 400;
+            }
+        </style>
+
         <title>Collaposer</title>
     </head>
 
@@ -21,8 +82,11 @@
         <header>
             <div class="title">Collaposer: Transforming Photo Collections into
                 Visual Assets for Storytelling with Collages</div>
-            <div class="subtitle"><strong>Jiayi Zhou</strong>, Liwenhan Xie, Jiaju Ma, Zheng Wei,
-                                    Huamin Qu, Anyi Rao</div>
+            <div class="subtitle">
+                <strong>Jiayi Zhou</strong><sup>1</sup>, Liwenhan Xie<sup>1</sup>, Jiaju Ma<sup>2</sup>,
+                Zheng Wei<sup>1</sup>, Huamin Qu<sup>1</sup>, Anyi Rao<sup>1</sup>
+            </div>
+            <div class="subtitle affiliation"><sup>1</sup>HKUST &nbsp;&nbsp; <sup>2</sup>Stanford University</div>
         </header>
         <nav>
             <a href="#" class="gray-link"><i class="fa-solid fa-file-pdf"></i> Paper</a>
@@ -34,44 +98,20 @@
             <section>
                 <img class="pic" src="./0. Pic/teaser.png" alt="teaser picture">
                 <div class="paragraph">
-                    Collaposer empowers independent creators to prepare visual
-                    assets for collage-based storytelling with a streamlined
-                    workflow by automatically selecting, cutting out, and
-                    visualizing diverse visual assets based on the input photo
-                    collection and story description.
-                    Given a curated overview of the extracted visual elements,
-                    users may interactively compose them into a static collage,
-                    or animate them to create expressive visual stories.
+                    Collaposer empowers individual creators to prepare visual assets for collage-based storytelling with a streamlined workflow by automatically selecting, cutting out, and presenting diverse visual assets based on the input photo collection and story description.
+  Given a curated overview of the extracted visual elements, users may compose them into a static collage, or animate them to create expressive visual stories.
                 </div>
             </section>
 
             <section>
                 <div class="section-title">Abstract</div>
                 <div class="paragraph">
-                    Collage is an art form that remixes visual elements to
-                    create narratives.
-                    However, it remains tedious and time-consuming to
-                    select, cut out, and organize visual assets from an
-                    unorganized set of images.
-                    Informed by a formative study, we propose Collaposer, a
-                    tool designed to automate the preparation of visual
-                    assets for storytelling with collage.
-                    Given a photo collection and a story description,
-                    Collaposer selects and cuts out visual elements that are
-                    both diverse in content and consistent with the story.
-                    Specifically, objects are extracted via image tagging,
-                    object detection, and segmentation, and then selected
-                    and organized leveraging the reasoning capabilities of
-                    LLM.
-                    To facilitate asset selection, Collaposer provides a
-                    curated overview that groups similar assets while
-                    resizing them based on selection criteria.
-                    A user study (N=12) demonstrated that Collaposer
-                    produced rich story-relevant assets, facilitated
-                    overview and navigation, and inspired users to create
-                    diverse stories.
-                    We further showcase our system's expressiveness in a
-                    gallery.
+                    Digital collage is an artistic practice that combines image cutouts to tell stories. However, preparing cutouts from a set of photos remains a tedious and time-consuming task.
+A formative study identified three main challenges: 1) inefficient search for relevant photos, 2) manual image cutout, and 3) difficulty in organizing large sets of cutouts.
+To meet these challenges and facilitate asset preparation for collage, we propose Collaposer, a tool that transforms a collection of photos into organized, ready-to-use visual cutouts based on user-provided story descriptions.
+Collaposer tags, detects, and segments photos, and then uses an LLM to select central and related labels based on the user-provided story description.
+Collaposer presents the resulting visuals in varying sizes, clustered according to semantic hierarchy.
+Our evaluation shows that Collaposer effectively automates the preparation process to produce diverse sets of visual cutouts adhering to the storyline, allowing users to focus on collaging these assets for storytelling.
                 </div>
                 <img class="pic" src="./0. Pic/pipeline.png"
                     alt="pipeline picture">
@@ -91,9 +131,11 @@
             </section>
 
             <section id="results">
-                <div class="section-title">Animated Collage Results</div>
-                <div class="note mobile-hide">* <span>Hover</span> the thumbnail to play animation on web.</div>
+                <div class="section-title">Animated Collage Results
+                    <div class="note mobile-hide">* <span>Hover</span> the thumbnail to play animation on web.</div>
                 <div class="note">* <span>Click</span> the thumbnail to see details.</div>
+                </div>
+                
                 <div class="collage-container">
 
                     <div class="collage-item">
@@ -171,9 +213,10 @@
                 <div class="linktofiile">
                 </div>
                 <img class="pic" src="./0. Pic/rating.png" alt="rating picture">
-                <paragraph>
-                    Collaposer outperforms baselines across all dimensions, demonstrating its ability to select diverse visual elements that align with the story and effectively present them for collage creation. In contrast, Ablated-Select shows the weakest asset-story consistency, often failing to provide relevant elements and occasionally including unrelated ones. Ablated-Present delivers the least satisfactory presentation results, though it has a relatively smaller impact on system usability. The distribution, mean value (Mean), and standard deviation (SD) of the subjective ratings in the post-study questionnaire based on a 7-point Likert scale (1: strongly disagree, 4: neutral, 7: strongly agree).
-                </paragraph>
+                <div class="paragraph">
+                    User ratings across four evaluation dimensions—Consistency, Diversity, Presentation, and Usability—covering eleven question items (Q1–Q4) for three system variants: Collaposer (c), Ablated-Select (as), and Ablated-Present (ap). Ratings were collected on a 7-point Likert scale (1 = Strongly Disagree, 7 = Strongly Agree). Asterisks (*) indicate statistically significant differences in mean ratings (p < .05 / 3).
+    Overall, the results indicate that Collaposer supports more effective story-aligned asset selection and presentation compared to the baselines. Ablated-Select shows the weakest asset-story consistency, often failing to provide relevant elements and occasionally including unrelated ones. Ablated-Present delivers the least satisfactory presentation results, though it has a relatively smaller impact on system usability.
+                </div>
             </section>
 
             <section>
